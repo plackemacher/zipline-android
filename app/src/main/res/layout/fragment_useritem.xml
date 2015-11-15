@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+	<FrameLayout
+		android:id="@+id/store_frame"
+		android:layout_width="match_parent"
+		android:layout_height="50dp">
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_gravity="center"
+			android:orientation="horizontal"
+			android:padding="6dp">
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:adjustViewBounds="true"
+				android:scaleType="fitCenter"
+				android:src="@drawable/wholefoods_vertical" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="8dp"
+				android:text="2201 I St NW\nWashington, DC 20037" />
+
+		</LinearLayout>
+		<View android:layout_width="match_parent"
+			  android:layout_height="@dimen/divider"
+			  android:layout_gravity="bottom"
+			  android:background="@color/divider" />
+	</FrameLayout>
+	<android.support.v7.widget.RecyclerView
+		android:id="@android:id/list"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+
+		android:layout_below="@id/store_frame"
+		android:clipToPadding="false"
+		android:paddingBottom="64dp"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+	<ImageView
+		android:id="@+id/ad"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:background="@android:color/white"
+		android:layout_marginBottom="56dp"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:adjustViewBounds="true"
+		android:alpha="0"
+		android:scaleType="fitCenter"
+		android:src="@drawable/ad_shifted" />
+</RelativeLayout>
